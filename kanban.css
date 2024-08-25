@@ -1,0 +1,158 @@
+/* General Styles */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0; /* Light text color */
+    background-color: #121212; /* Dark background color */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Container and Input Styles */
+.container {
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Restrict width of input area */
+}
+
+.input-container input {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #1e1e1e; /* Darker input background */
+    border: 2px solid #1e90ff; /* Light blue border */
+    border-radius: 5px; /* Rounded corners for input */
+    color: #e0e0e0; /* Light text color in input */
+    outline: none;
+    flex: 1; /* Make input take available space */
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #1e90ff; /* Light blue background for button */
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    color: #ffffff; /* White text color for button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.input-container button:hover {
+    background-color: #1c86ee; /* Slightly darker blue on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Board Container Styles */
+.board-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap boards to next line if needed */
+    gap: 20px; /* Space between boards */
+    justify-content: center; /* Center boards */
+    width: 100%;
+    max-width: 1200px; /* Restrict width of board container */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Board Styles */
+.board {
+    border-radius: 10px;
+    padding: 20px;
+    height: 80vh;
+    width: 260px; /* Slightly increased width */
+    background-color: #1e1e1e; /* Dark background color for board */
+    box-shadow: rgba(30, 144, 255, 0.2) 0px 4px 8px; /* Subtle light blue shadow */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between items */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Heading Styles */
+.board h3 {
+    display: flex;
+    align-items: center;
+    font-size: 20px; /* Slightly smaller font size for headings */
+    font-weight: bold; /* Bold headings */
+    margin-bottom: 10px;
+    color: #1e90ff; /* Light blue text color */
+    position: relative;
+    padding-left: 40px; /* Space for the circle */
+    background-color: transparent; /* Ensure background is transparent */
+    border-bottom: 2px solid transparent; /* Border for heading */
+}
+
+.board h3::before {
+    content: "";
+    position: absolute;
+    left: 10px; /* Position the circle to the left */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Make it a circle */
+    background-color: #1e90ff; /* Default color for the circle */
+}
+
+/* Different colors for each board's heading circle and border */
+.todo-board h3 {
+    border-bottom-color: #ff6347; /* Tomato color for Todo board */
+}
+
+.todo-board h3::before {
+    background-color: #ff6347; /* Tomato color for Todo board */
+}
+
+.progress-board h3 {
+    border-bottom-color: #ffa500; /* Orange color for In Progress board */
+}
+
+.progress-board h3::before {
+    background-color: #ffa500; /* Orange color for In Progress board */
+}
+
+.complete-board h3 {
+    border-bottom-color: #32cd32; /* Lime color for Done board */
+}
+
+.complete-board h3::before {
+    background-color: #32cd32; /* Lime color for Done board */
+}
+
+/* Item Styles */
+.item {
+    border: 1px solid #444; /* Gray border color for item */
+    border-radius: 5px;
+    font-size: 14px; /* Slightly smaller font size for items */
+    padding: 10px;
+    cursor: pointer;
+    background-color: #2c2c2c; /* Dark gray background color for item */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px; /* Gray shadow */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.item p {
+    margin: 0; /* Remove default margin from paragraph */
+    background-color: transparent; /* Ensure text background is transparent */
+}
+
+/* Ensure no background color for all child elements inside item */
+.item * {
+    background-color: transparent;
+}
+
+.item:hover {
+    background-color: #333; /* Slightly lighter gray on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
