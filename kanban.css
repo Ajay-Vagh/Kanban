@@ -92,7 +92,8 @@
     position: relative;
     padding-left: 40px; /* Space for the circle */
     background-color: transparent; /* Ensure background is transparent */
-    border-bottom: 2px solid transparent; /* Border for heading */
+    /* border-bottom: 2px dotted transparent;  */
+    /* padding-bottom: 2px; */
 }
 
 .board h3::before {
